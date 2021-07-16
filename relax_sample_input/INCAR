@@ -1,0 +1,38 @@
+SYSTEM = LTA
+start Parameters
+  NWRITE     = 2     
+  ISTART     = 1     
+  INIWAV     = 1     
+  ICORELEVEL = 1      
+  NBANDS     = 360    
+
+parallelisation
+  NCORE  = 5         
+  KPAR   = 2          
+  
+electronic relaxation
+  PREC    = Accurate  
+  ALGO    = Normal      
+  ENCUT   = 450      
+  NELM    = 200       
+  NELMIN  = 2         
+  EDIFF   = 1E-06     
+  GGA     = PS        
+  LASPH   = .TRUE.    
+
+ionic relaxation
+  EDIFFG = -0.01     
+  NSW    = 100          
+  IBRION = 1          
+  ISIF   = 2          
+  ISYM   = 3          
+  NBLOCK = 1          
+  KBLOCK = 40        
+  ISMEAR = 0          
+  SIGMA  = 0.02      
+  IWAVPR = 1          
+  POTIM  = 0.3       
+
+misc
+  LCHARG = .FALSE.
+  LWAVE = .FALSE.
